@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アプリケーション仕様書 - WebSpec Wingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>アプリケーション仕様書</h1>
+                <ul>
+                    <li><a href="#overview">プロジェクト概要</a></li>
+                    <li><a href="#requirements">要件定義</a></li>
+                    <li><a href="#features">機能仕様</a></li>
+                    <li><a href="#ui-design">UI/UXデザイン</a></li>
+                    <li><a href="#technical">技術仕様</a></li>
+                    <li><a href="#database">データベース設計</a></li>
+                    <li><a href="#api">API仕様</a></li>
+                    <li><a href="#security">セキュリティ</a></li>
+                    <li><a href="#testing">テスト計画</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>プロジェクト概要</h2>
+                <div class="info-box">
+                    <h3>基本情報</h3>
+                    <table class="info-table">
+                        <tr>
+                            <th>プロジェクト名</th>
+                            <td>WebSpec Wingo</td>
+                        </tr>
+                        <tr>
+                            <th>バージョン</th>
+                            <td>1.0.0</td>
+                        </tr>
+                        <tr>
+                            <th>作成日</th>
+                            <td>2025年6月9日</td>
+                        </tr>
+                        <tr>
+                            <th>最終更新日</th>
+                            <td>2025年6月9日</td>
+                        </tr>
+                        <tr>
+                            <th>ステータス</th>
+                            <td>計画中</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="content-section">
+                    <h3>プロジェクト背景</h3>
+                    <p>WebSpec Wingoは、ウェブアプリケーションの仕様書を作成、管理、出力するためのツールです。プロジェクトの要件定義から技術仕様までを一元管理し、PDF形式で出力できることを目指しています。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>ターゲットユーザー</h3>
+                    <ul>
+                        <li>プライマリーユーザー: ソフトウェア開発者、プロジェクトマネージャー</li>
+                        <li>セカンダリーユーザー: テクニカルライター、チームメンバー</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="requirements" class="section">
+            <div class="container">
+                <h2>要件定義</h2>
+                
+                <div class="requirement-section">
+                    <h3>機能要件</h3>
+                    <table class="requirements-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>要件名</th>
+                                <th>優先度</th>
+                                <th>説明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FR-001</td>
+                                <td>ユーザー認証</td>
+                                <td>高</td>
+                                <td>ユーザーがログイン/ログアウトできる</td>
+                            </tr>
+                            <tr>
+                                <td>FR-002</td>
+                                <td>[要件名]</td>
+                                <td>[優先度]</td>
+                                <td>[説明]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="requirement-section">
+                    <h3>非機能要件</h3>
+                    <table class="requirements-table">
+                        <thead>
+                            <tr>
+                                <th>カテゴリ</th>
+                                <th>要件</th>
+                                <th>基準</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>パフォーマンス</td>
+                                <td>レスポンス時間</td>
+                                <td>3秒以内</td>
+                            </tr>
+                            <tr>
+                                <td>可用性</td>
+                                <td>稼働率</td>
+                                <td>99.9%</td>
+                            </tr>
+                            <tr>
+                                <td>セキュリティ</td>
+                                <td>データ暗号化</td>
+                                <td>SSL/TLS使用</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2>機能仕様</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h3>1. ユーザー管理機能</h3>
+                        <div class="feature-details">
+                            <h4>概要</h4>
+                            <p>ユーザーの登録、プロフィール管理、権限管理を行う</p>
+                            
+                            <h4>詳細仕様</h4>
+                            <ul>
+                                <li>新規ユーザー登録</li>
+                                <li>ログイン/ログアウト</li>
+                                <li>パスワードリセット</li>
+                                <li>プロフィール編集</li>
+                            </ul>
+
+                            <h4>画面遷移</h4>
+                            <div class="flow-diagram">
+                                [画面遷移図を挿入]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3>2. [機能名]</h3>
+                        <div class="feature-details">
+                            <h4>概要</h4>
+                            <p>[機能の概要を記載]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ui-design" class="section">
+            <div class="container">
+                <h2>UI/UXデザイン</h2>
+                
+                <div class="design-section">
+                    <h3>デザインシステム</h3>
+                    
+                    <h4>カラーパレット</h4>
+                    <div class="color-palette">
+                        <div class="color-item" style="background-color: #007bff;">
+                            <span>Primary</span>
+                            <span>#007bff</span>
+                        </div>
+                        <div class="color-item" style="background-color: #6c757d;">
+                            <span>Secondary</span>
+                            <span>#6c757d</span>
+                        </div>
+                        <div class="color-item" style="background-color: #28a745;">
+                            <span>Success</span>
+                            <span>#28a745</span>
+                        </div>
+                        <div class="color-item" style="background-color: #dc3545;">
+                            <span>Danger</span>
+                            <span>#dc3545</span>
+                        </div>
+                    </div>
+
+                    <h4>タイポグラフィ</h4>
+                    <table class="typography-table">
+                        <tr>
+                            <td>見出し1</td>
+                            <td>32px / Bold</td>
+                        </tr>
+                        <tr>
+                            <td>見出し2</td>
+                            <td>24px / Bold</td>
+                        </tr>
+                        <tr>
+                            <td>本文</td>
+                            <td>16px / Regular</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="wireframe-section">
+                    <h3>画面設計</h3>
+                    <div class="wireframe-grid">
+                        <div class="wireframe-item">
+                            <h4>ログイン画面</h4>
+                            <div class="wireframe-placeholder">
+                                [ワイヤーフレーム画像]
+                            </div>
+                        </div>
+                        <div class="wireframe-item">
+                            <h4>ダッシュボード</h4>
+                            <div class="wireframe-placeholder">
+                                [ワイヤーフレーム画像]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical" class="section">
+            <div class="container">
+                <h2>技術仕様</h2>
+                
+                <div class="tech-stack">
+                    <h3>技術スタック</h3>
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>レイヤー</th>
+                                <th>技術</th>
+                                <th>バージョン</th>
+                                <th>備考</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>フロントエンド</td>
+                                <td>[React/Vue/Angular]</td>
+                                <td>[バージョン]</td>
+                                <td>[備考]</td>
+                            </tr>
+                            <tr>
+                                <td>バックエンド</td>
+                                <td>[Node.js/Python/Java]</td>
+                                <td>[バージョン]</td>
+                                <td>[備考]</td>
+                            </tr>
+                            <tr>
+                                <td>データベース</td>
+                                <td>[PostgreSQL/MySQL/MongoDB]</td>
+                                <td>[バージョン]</td>
+                                <td>[備考]</td>
+                            </tr>
+                            <tr>
+                                <td>インフラ</td>
+                                <td>[AWS/GCP/Azure]</td>
+                                <td>-</td>
+                                <td>[備考]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="architecture">
+                    <h3>システムアーキテクチャ</h3>
+                    <div class="diagram-placeholder">
+                        [アーキテクチャ図を挿入]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="database" class="section">
+            <div class="container">
+                <h2>データベース設計</h2>
+                
+                <div class="er-diagram">
+                    <h3>ER図</h3>
+                    <div class="diagram-placeholder">
+                        [ER図を挿入]
+                    </div>
+                </div>
+
+                <div class="table-definitions">
+                    <h3>テーブル定義</h3>
+                    
+                    <div class="table-def">
+                        <h4>users テーブル</h4>
+                        <table class="db-table">
+                            <thead>
+                                <tr>
+                                    <th>カラム名</th>
+                                    <th>型</th>
+                                    <th>NULL</th>
+                                    <th>キー</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>BIGINT</td>
+                                    <td>NO</td>
+                                    <td>PK</td>
+                                    <td>ユーザーID</td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>VARCHAR(255)</td>
+                                    <td>NO</td>
+                                    <td>UNIQUE</td>
+                                    <td>メールアドレス</td>
+                                </tr>
+                                <tr>
+                                    <td>created_at</td>
+                                    <td>TIMESTAMP</td>
+                                    <td>NO</td>
+                                    <td>-</td>
+                                    <td>作成日時</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="api" class="section">
+            <div class="container">
+                <h2>API仕様</h2>
+                
+                <div class="api-overview">
+                    <h3>API概要</h3>
+                    <ul>
+                        <li>ベースURL: <code>https://api.example.com/v1</code></li>
+                        <li>認証方式: Bearer Token (JWT)</li>
+                        <li>レスポンス形式: JSON</li>
+                    </ul>
+                </div>
+
+                <div class="api-endpoints">
+                    <h3>エンドポイント一覧</h3>
+                    
+                    <div class="endpoint">
+                        <h4>ユーザー認証</h4>
+                        <div class="endpoint-detail">
+                            <div class="method-path">
+                                <span class="method post">POST</span>
+                                <code>/auth/login</code>
+                            </div>
+                            
+                            <h5>リクエスト</h5>
+                            <pre><code>{
+  "email": "user@example.com",
+  "password": "password123"
+}</code></pre>
+
+                            <h5>レスポンス</h5>
+                            <pre><code>{
+  "token": "eyJhbGciOiJIUzI1NiIs...",
+  "user": {
+    "id": 1,
+    "email": "user@example.com",
+    "name": "ユーザー名"
+  }
+}</code></pre>
+
+                            <h5>エラーレスポンス</h5>
+                            <table class="error-table">
+                                <tr>
+                                    <th>ステータスコード</th>
+                                    <th>説明</th>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>認証失敗</td>
+                                </tr>
+                                <tr>
+                                    <td>422</td>
+                                    <td>バリデーションエラー</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="endpoint">
+                        <h4>ユーザー一覧取得</h4>
+                        <div class="endpoint-detail">
+                            <div class="method-path">
+                                <span class="method get">GET</span>
+                                <code>/users</code>
+                            </div>
+                            
+                            <h5>パラメータ</h5>
+                            <table class="param-table">
+                                <tr>
+                                    <th>名前</th>
+                                    <th>型</th>
+                                    <th>必須</th>
+                                    <th>説明</th>
+                                </tr>
+                                <tr>
+                                    <td>page</td>
+                                    <td>integer</td>
+                                    <td>No</td>
+                                    <td>ページ番号 (デフォルト: 1)</td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>integer</td>
+                                    <td>No</td>
+                                    <td>1ページあたりの件数 (デフォルト: 20)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="section">
+            <div class="container">
+                <h2>セキュリティ</h2>
+                
+                <div class="security-measures">
+                    <h3>セキュリティ対策</h3>
+                    <ul>
+                        <li>
+                            <strong>認証・認可</strong>
+                            <ul>
+                                <li>JWT トークンによる認証</li>
+                                <li>ロールベースアクセス制御 (RBAC)</li>
+                                <li>セッションタイムアウト設定</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>データ保護</strong>
+                            <ul>
+                                <li>HTTPS通信の強制</li>
+                                <li>データベース暗号化</li>
+                                <li>パスワードのハッシュ化 (bcrypt)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>脆弱性対策</strong>
+                            <ul>
+                                <li>SQLインジェクション対策</li>
+                                <li>XSS対策</li>
+                                <li>CSRF対策</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testing" class="section">
+            <div class="container">
+                <h2>テスト計画</h2>
+                
+                <div class="test-strategy">
+                    <h3>テスト戦略</h3>
+                    <table class="test-table">
+                        <thead>
+                            <tr>
+                                <th>テスト種別</th>
+                                <th>対象</th>
+                                <th>ツール</th>
+                                <th>カバレッジ目標</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>単体テスト</td>
+                                <td>関数・メソッド</td>
+                                <td>Jest / pytest</td>
+                                <td>80%以上</td>
+                            </tr>
+                            <tr>
+                                <td>統合テスト</td>
+                                <td>API・モジュール間</td>
+                                <td>Postman / Newman</td>
+                                <td>主要フロー100%</td>
+                            </tr>
+                            <tr>
+                                <td>E2Eテスト</td>
+                                <td>ユーザーシナリオ</td>
+                                <td>Cypress / Selenium</td>
+                                <td>重要機能100%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="test-cases">
+                    <h3>主要テストケース</h3>
+                    <ol>
+                        <li>ユーザー登録フロー</li>
+                        <li>ログイン・ログアウト</li>
+                        <li>データの作成・更新・削除</li>
+                        <li>権限による機能制限</li>
+                        <li>エラーハンドリング</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 アプリケーション仕様書. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
